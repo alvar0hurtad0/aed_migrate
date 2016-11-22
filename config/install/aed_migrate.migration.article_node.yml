@@ -1,0 +1,16 @@
+# Migration configuration articles.
+id: article_node
+label: Blog migration
+migration_group: aed
+source:
+  plugin: article_node
+  key: for_migrate
+destination:
+  plugin: entity:node
+process:
+  type:
+    plugin: default_value
+    default_value: article
+  nid: id
+  title: title
+
