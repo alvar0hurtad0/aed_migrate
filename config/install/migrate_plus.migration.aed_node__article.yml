@@ -12,4 +12,21 @@ process:
     plugin: default_value
     default_value: article
   title: title
+  langcode:
+    plugin: static_map
+    bypass: true
+    source: language
+    map:
+      und: es
+  uid: uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  'body/format':
+    plugin: default_value
+    default_value: filtered_html
+  'body/value': body_value
+  'body/summary': body_summary
 
