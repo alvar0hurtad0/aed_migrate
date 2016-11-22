@@ -1,0 +1,5 @@
+id: aed
+label: AED migrations
+source_type: Custom
+shared_configuration:
+  key: for_migrate

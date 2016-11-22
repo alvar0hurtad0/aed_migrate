@@ -15,9 +15,9 @@ use Drupal\migrate\Row;
 class ArticleNode extends SqlBase {
 
   public function query() {
-    $query = $this->select('articles','a')
+    $query = $this->select('node','a')
       ->fields('a', [
-        'id',
+        'nid',
         'title',
       ]);
     return $query;
@@ -25,7 +25,7 @@ class ArticleNode extends SqlBase {
 
   public function fields() {
     $fields = [
-      'id' => $this->t("Article ID"),
+      'nid' => $this->t("Node NID"),
       'title' => $this->t("Node Title"),
     ];
     return $fields;
@@ -33,7 +33,7 @@ class ArticleNode extends SqlBase {
 
   public function getIds() {
     return [
-      'id' => [
+      'nid' => [
         'type' => 'integer',
         'alias' => 'a',
       ],

@@ -11,6 +11,5 @@ process:
   type:
     plugin: default_value
     default_value: article
-  nid: id
   title: title
 
