@@ -1,5 +1,5 @@
 id: aed
 label: AED migrations
-source_type: Custom
+source_type: 'Drupal 7'
 shared_configuration:
-  key: for_migrate
+  key: migrate

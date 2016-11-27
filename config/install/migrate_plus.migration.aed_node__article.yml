@@ -2,31 +2,31 @@
 id: article_node
 label: Blog migration
 migration_group: aed
+langcode: en
+deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
 source:
   plugin: article_node
-  key: for_migrate
+  bundle: article
 destination:
   plugin: entity:node
+  default_bundle: article
 process:
   type:
     plugin: default_value
     default_value: article
   title: title
   langcode:
-    plugin: static_map
-    bypass: true
+    plugin: default_value
     source: language
-    map:
-      und: es
+    default_value: en
   uid: uid
   status: status
   created: created
   changed: changed
   promote: promote
   sticky: sticky
-  'body/format':
-    plugin: default_value
-    default_value: filtered_html
-  'body/value': body_value
-  'body/summary': body_summary
+  "body/value": body_value
+  "body/teaser": body_teaser
+  "body/format": body_format
+
 
