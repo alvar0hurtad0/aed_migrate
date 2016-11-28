@@ -1,0 +1,35 @@
+# Migration configuration videos.
+id: node_videos
+label: Videos migration
+migration_group: aed
+langcode: und
+status: true
+deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
+source:
+  plugin: node_videos
+  node_type: videos
+destination:
+  plugin: entity:node
+  default_bundle: videos
+process:
+  type:
+    plugin: default_value
+    default_value: videos
+  title: title
+  langcode:
+    plugin: default_value
+    default_value: und
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  body/value: body_value
+  body/teaser: body_teaser
+  body/format: body_format
+migration_dependencies:
+    required:
+      - user
+
+
