@@ -9,7 +9,7 @@ use Drupal\node\Plugin\migrate\source\d7\Node;
  * Drupal 7 node source from database.
  *
  * @MigrateSource(
- *   id = "article_node"
+ *   id = "node_article"
  * )
  */
 class NodeArticle extends Node {

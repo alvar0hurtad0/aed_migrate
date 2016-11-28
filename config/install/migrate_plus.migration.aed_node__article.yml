@@ -1,11 +1,12 @@
 # Migration configuration articles.
-id: article_node
+id: node_article
 label: Blog migration
 migration_group: aed
 langcode: und
+status: true
 deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
 source:
-  plugin: article_node
+  plugin: node_article
   node_type: article
 destination:
   plugin: entity:node
@@ -18,7 +19,7 @@ process:
   langcode:
     plugin: default_value
     default_value: und
-  uid: uid
+  uid: node_uid
   status: status
   created: created
   changed: changed
@@ -27,5 +28,8 @@ process:
   body/value: body_value
   body/teaser: body_teaser
   body/format: body_format
+migration_dependencies:
+    required:
+      - user
 
 
