@@ -24,6 +24,7 @@ class NodeArticle extends Node {
 
     // Body.
     $body = $this->getFieldValues('node', 'body', $nid, $vid);
+
     $row->setSourceProperty('body_value', $body[0]['value']);
     $row->setSourceProperty('body_format', 'full_html');
     $row->setSourceProperty('body_summary', $body[0]['summary']);

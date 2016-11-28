@@ -2,11 +2,11 @@
 id: article_node
 label: Blog migration
 migration_group: aed
-langcode: en
+langcode: und
 deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
 source:
   plugin: article_node
-  bundle: article
+  node_type: article
 destination:
   plugin: entity:node
   default_bundle: article
@@ -17,16 +17,15 @@ process:
   title: title
   langcode:
     plugin: default_value
-    source: language
-    default_value: en
+    default_value: und
   uid: uid
   status: status
   created: created
   changed: changed
   promote: promote
   sticky: sticky
-  "body/value": body_value
-  "body/teaser": body_teaser
-  "body/format": body_format
+  body/value: body_value
+  body/teaser: body_teaser
+  body/format: body_format
 
 
