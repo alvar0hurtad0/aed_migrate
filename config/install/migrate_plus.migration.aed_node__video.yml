@@ -63,7 +63,9 @@ process:
      source: field_videos_version
      process:
        target_id: tid
-
+  field_video_url:
+    plugin: video_embed_field
+    source: field_videos_video
 migration_dependencies:
     required:
       - user
