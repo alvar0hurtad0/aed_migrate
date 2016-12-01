@@ -29,6 +29,20 @@ class NodeArticle extends Node {
     $row->setSourceProperty('body_format', 'full_html');
     $row->setSourceProperty('body_summary', $body[0]['summary']);
 
+    // Taxonomy terms.
+    $taxonomy_terms = [
+      'field_tags',
+    ];
+
+    foreach ($taxonomy_terms as $term) {
+      $value = [];
+      $source_term = $this->getFieldValues('node', $term, $nid, $vid);
+      foreach ($source_term as $item) {
+        $value[] = $item['tid'];
+      }
+      $row->setSourceProperty($term, $value);
+    }
+
     return parent::prepareRow($row);
 
   }

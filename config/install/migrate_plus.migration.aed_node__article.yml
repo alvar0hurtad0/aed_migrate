@@ -28,6 +28,11 @@ process:
   body/value: body_value
   body/teaser: body_teaser
   body/format: body_format
+  field_tags:
+     plugin: iterator
+     source: field_tags
+     process:
+       target_id: tid
 migration_dependencies:
     required:
       - user
