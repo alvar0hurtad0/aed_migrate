@@ -63,9 +63,18 @@ process:
      source: field_videos_version
      process:
        target_id: tid
+  field_slides:
+    plugin: iterator
+    source: field_slides
+    process:
+      uri: url
+      title: title
+      options: attributes
   field_video_url:
-    plugin: video_embed_field
+    plugin: iterator
     source: field_videos_video
+    process:
+      value: video_url
 migration_dependencies:
     required:
       - user
