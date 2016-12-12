@@ -24,7 +24,7 @@ process:
   init: init
   roles:
     plugin: migration
-    migration: upgrade_d7_user_role
+    migration: user_role
     source: roles
   user_picture:
     -
